@@ -20,4 +20,12 @@ See [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
 - weights of the proposed method for height estimation: `weights/realesrgan_feature_aggre_weight_globe`
 
 ## Testing on 301 urban centers
-coming soon
+- Data and predicted results
+see [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
+Download and put the origin data (S1&S2) in the current directory `data/urban`
+
+- Predict command by yourself:
+```commandline
+python predict_realesanet_feature_globe.py
+```
+
