@@ -1,5 +1,5 @@
 # A deep learning-based super-resolution method for building height estimation at 2.5 m spatial resolution in the Northern Hemisphere
-Author: Yinxia Cao, Qihao Weng* | [Paper link](https://www.sciencedirect.com/science/article/pii/S0034425724002591) | Date: August 2024
+Author: Yinxia Cao, Qihao Weng* | [Paper link](https://www.sciencedirect.com/science/article/pii/S0034425724002591) | Date: August 2024 | Journal: Remote Sensing of Environment 
 
 ## Dataset
 - Download link in [google drive](https://drive.google.com/drive/folders/1ngeSyPWOUkj0DTS4M1zuSsbIdYeAHHhS?usp=drive_link) or [Onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf). The total size is 2.72G    
@@ -8,8 +8,14 @@ Author: Yinxia Cao, Qihao Weng* | [Paper link](https://www.sciencedirect.com/sci
  The specific spliting file is put in `BH_dataset.py`
 - Obtain the statistics of the dataset, see the directory  `datasteglobe` 
 The specifi file is `stats_dataset_globe.py`    
+- Distribution of the dataset (45,000 samples)
+![figure](assets/Figure%201.JPG) 
+![figure](assets/Figure%202.JPG) 
 
-## Training
+## Method
+![figure](assets/Figure%203.jpg)
+
+## Training & Tesing
 ```commandline
 python train.py
 ```
@@ -18,6 +24,8 @@ python train.py
 See [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
 - weights of the super-resolution module: `weights/realesrgan`
 - weights of the proposed method for height estimation: `weights/realesrgan_feature_aggre_weight_globe`
+- Results on testing set:
+![figure](assets/Figure%209.JPG)
 
 ## Testing on 301 urban centers
 - Data and predicted results
@@ -28,4 +36,12 @@ Download and put the origin data (S1&S2) in the current directory `data/urban`
 ```commandline
 python predict_realesanet_feature_globe.py
 ```
+- Results:
+Distribution
+![figure](assets/Figure%2010.jpg)
+The mean and std of building height in each urban center
+![figure](assets/Figure%2011.JPG)
 
+## Other files
+- Download sentinel-1 & sentinel-2 from the GEE platform
+coming soon
