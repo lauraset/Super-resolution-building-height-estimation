@@ -2,7 +2,7 @@
 Author: Yinxia Cao, Qihao Weng* | [Paper link](https://www.sciencedirect.com/science/article/pii/S0034425724002591) | Date: August 2024
 
 ## Dataset
-- Download link in [google drive](https://drive.google.com/drive/folders/1ngeSyPWOUkj0DTS4M1zuSsbIdYeAHHhS?usp=drive_link) or[Onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf). The total size is 2.72G    
+- Download link in [google drive](https://drive.google.com/drive/folders/1ngeSyPWOUkj0DTS4M1zuSsbIdYeAHHhS?usp=drive_link) or [Onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf). The total size is 2.72G    
 - Unzip them to a path (e.g., `data`)
 - Split dataset into train/val/test set, see the directory `data`
  The specific spliting file is put in `BH_dataset.py`
@@ -14,5 +14,10 @@ The specifi file is `stats_dataset_globe.py`
 python train.py
 ```
 
-## Pretrained weights
-available soon
+## Pretrained weights and test results
+See [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
+- weights of the super-resolution module: `weights/realesrgan`
+- weights of the proposed method for height estimation: `weights/realesrgan_feature_aggre_weight_globe`
+
+## Testing on 301 urban centers
+coming soon

@@ -23,12 +23,12 @@ from BH_loader import wholeimgLoader
 
 def get_args(city='globe'):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--datapath', default=r'D:\data\buildheight\samples')
+    parser.add_argument('--datapath', default=r'.\data')
     parser.add_argument('--trainlist', default=f'datalist_{city}_train_0.7.csv')
     parser.add_argument('--vallist', default=f'datalist_{city}_test_0.7_val_0.3.csv')
     parser.add_argument('--testlist', default=f'datalist_{city}_test_0.7_test_0.3.csv')
-    parser.add_argument('--logdir', default=fr'D:\code\BHNetdata\realesrgan_feature_aggre_weight_{city}')
-    parser.add_argument('--logdirhr', default=fr'D:\code\BHNetdata\realesrgan\checkpoint.tar') # add
+    parser.add_argument('--logdir', default=fr'.\weights\realesrgan_feature_aggre_weight_{city}')
+    parser.add_argument('--logdirhr', default=fr'.\weights\realesrgan\checkpoint2.tar') # add
     parser.add_argument('--rgbseq', default=[0, 1, 2], help='the location of RGB bands')
 
     parser.add_argument('--checkpoint',default='checkpoint.tar')
