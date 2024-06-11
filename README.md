@@ -28,8 +28,7 @@ See [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
 ![figure](assets/Figure%209.JPG)
 
 ## Testing on 301 urban centers
-- Data and predicted results
-see [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
+- Data and predicted results: see [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)  
 Download and put the origin data (S1&S2) in the current directory `data/urban`
 
 - Predict command by yourself:
@@ -37,9 +36,9 @@ Download and put the origin data (S1&S2) in the current directory `data/urban`
 python predict_realesanet_feature_globe.py
 ```
 - Results:
-Distribution
+    -  Distribution
 ![figure](assets/Figure%2010.jpg)
-The mean and std of building height in each urban center
+    - The mean and std of building height in each urban center
 ![figure](assets/Figure%2011.JPG)
 
 ## Other files
