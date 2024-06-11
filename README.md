@@ -15,7 +15,7 @@ The specifi file is `stats_dataset_globe.py`
 ## Method
 ![figure](assets/Figure%203.jpg)
 
-## Training & Tesing
+## Training & Testing
 ```commandline
 python train.py
 ```
@@ -28,10 +28,16 @@ See [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
 ![figure](assets/Figure%209.JPG)
 
 ## Testing on 301 urban centers
+- Basic information   
+  For large metropolitan areas, the file name is xx_large, while for metropolitan areas, the file name is xx_metro.
+![figure](assets/urbancenter.png)
 - Data and predicted results: see [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)  
-Download and put the origin data (S1&S2) in the current directory `data/urban`
-
-- Predict command by yourself:
+The mean and std of each urban center is put in `datasetglobe/urbanarea_meanstd.xls` and the results are put in:
+![figure](assets/predicted_results.png)
+- Predicting by yourself
+  - Download and put the origin data (S1&S2) in the current directory `data/urban/input_data`  
+![figure](assets/input_data.png)
+  - Predict all the urban centers
 ```commandline
 python predict_realesanet_feature_globe.py
 ```

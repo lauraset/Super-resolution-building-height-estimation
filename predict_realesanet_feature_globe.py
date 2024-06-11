@@ -224,10 +224,10 @@ if __name__=="__main__":
     args = get_args(city=city)
     args.checkpoint = 'checkpoint20.tar'
  
-    isonamelist = ['chn', 'usa', 'europe',  'chn_metro', 'usa_metro', 'europe_metro']
+    isonamelist = ['chn_large', 'usa_large', 'europe_large',  'chn_metro', 'usa_metro', 'europe_metro']
 
     for isoname in isonamelist:
-        args.wholeimgpath = r'.\data\urban\s2'+isoname
+        args.wholeimgpath = r'.\data\urban\input_data\s2'+isoname
         # flist = getcitynamelist(args)
         main_test(args, num_sample=0, suffix='city'+isoname,
                 iswhole=True, batch_size=16, num_workers=8, gridvalid='isv')
