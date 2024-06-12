@@ -8,6 +8,7 @@ numpy
 tifffile
 opencv-python
 pandas
+geopandas
 tqdm
 shapely
 TensorboardX

@@ -16,7 +16,7 @@ The specifi file is `stats_dataset_globe.py`
 ![figure](assets/Figure%203.jpg)
 
 ## Setup environments
-Necessary libraries see file `requirements.txt`
+Necessary libraries were put in file `requirements.txt`
 
 
 ## Training & Testing
