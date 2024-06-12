@@ -1,0 +1,14 @@
+torch>=1.13.0
+torchvision>=0.14.0
+albumentations
+gdal
+rasterio
+matplotlib
+numpy
+tifffile
+opencv-python
+pandas
+tqdm
+shapely
+TensorboardX
+segmentation_models_pytorch

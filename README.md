@@ -15,6 +15,10 @@ The specifi file is `stats_dataset_globe.py`
 ## Method
 ![figure](assets/Figure%203.jpg)
 
+## Setup environments
+Necessary libraries see file `requirements.txt`
+
+
 ## Training & Testing
 ```commandline
 python train.py
