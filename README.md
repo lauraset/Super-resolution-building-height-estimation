@@ -41,6 +41,13 @@ The mean and std of each urban center is put in `datasetglobe/urbanarea_meanstd.
 - Predicting by yourself
   - Download and put the origin data (S1&S2) in the current directory `data/urban/input_data`  
 ![figure](assets/input_data.png)
+  - Prepare xx_grid.shp as the prediction unit
+    - Download WSF (world settlement footprint) 2019 at 10-m resolution as the valid built-up areas, see the [official website](https://download.geoservice.dlr.de/WSF2019/)
+    - Clip WSF to the extent of each urban center
+    - Convert the shapefile of urban centers into rasters
+    - Split each urban center into grid with size of 640 x 640 m
+    - Select the grid with wsf > 20 pixels
+
   - Predict all the urban centers
 ```commandline
 python predict_realesanet_feature_globe.py
@@ -50,6 +57,12 @@ python predict_realesanet_feature_globe.py
 ![figure](assets/Figure%2010.jpg)
     - The mean and std of building height in each urban center
 ![figure](assets/Figure%2011.JPG)
+
+
+## Predict other regions
+- Download sentinel-1 & sentinel-2 from the GEE
+- Download WSF 
+
 
 ## Other files
 - Download sentinel-1 & sentinel-2 from the GEE platform

@@ -606,42 +606,43 @@ def convert_geotrans_gdal(src_tif, res_tif):
 
 
 if __name__=="__main__":
-    # isoname = 'CHN'
+    isoname = 'CHN'
     # isoname = 'USA'
     # dirname = isoname+'_metro'
     # # isoname = 'USA'
-    # namefield = 'iso_a3'
-    # typefield = 'metropolitan areas' #'large metropolitan areas'
+    namefield = 'iso_a3'
+    typefield = 'metropolitan areas' #'large metropolitan areas'
 
     # isoname = 'Europe'
     # dirname = isoname + '_metro'
     # namefield = 'continent'
     # typefield = 'metropolitan areas'
-    # # main_clip_wsf(isoname=dirname)
-    # # # main_gen_mask()
-    # # generate_validgrid(dirname, isoname, namefield=namefield, typefield=typefield)
+    main_clip_wsf(isoname=dirname)
+    # main_gen_mask()
+    ## 2023.12.8: generate mask for each region,
+    main_gen_mask(isoname='CHN', fieldname='iso_a3', namevalue='CHN',
+                  fieldpop='ghspop_2_1', popvalue='large metropolitan areas')
+    main_gen_mask(isoname='USA', fieldname='iso_a3', namevalue='USA',
+                  fieldpop='ghspop_2_1', popvalue='large metropolitan areas')
+    main_gen_mask(isoname='Europe', fieldname='continent', namevalue='Europe',
+                  fieldpop='ghspop_2_1', popvalue='large metropolitan areas')
+    # metro
+    main_gen_mask(isoname='CHN_metro', fieldname='iso_a3', namevalue='CHN',
+                  fieldpop='ghspop_2_1', popvalue='metropolitan areas')
+    main_gen_mask(isoname='USA_metro', fieldname='iso_a3', namevalue='USA',
+                  fieldpop='ghspop_2_1', popvalue='metropolitan areas')
+    main_gen_mask(isoname='Europe_metro', fieldname='continent', namevalue='Europe',
+                  fieldpop='ghspop_2_1', popvalue='metropolitan areas')
+    # generate validgrid
+    generate_validgrid(dirname, isoname, namefield=namefield, typefield=typefield)
     # main_sample_stats(dirname)
 
-    ## 2023.12.8: generate mask for each region,
-    # main_gen_mask(isoname='CHN', fieldname='iso_a3', namevalue='CHN',
-    #               fieldpop='ghspop_2_1', popvalue='large metropolitan areas')
-    # main_gen_mask(isoname='USA', fieldname='iso_a3', namevalue='USA',
-    #               fieldpop='ghspop_2_1', popvalue='large metropolitan areas')
-    # main_gen_mask(isoname='Europe', fieldname='continent', namevalue='Europe',
-    #               fieldpop='ghspop_2_1', popvalue='large metropolitan areas')
-    # metro
-    # main_gen_mask(isoname='CHN_metro', fieldname='iso_a3', namevalue='CHN',
-    #               fieldpop='ghspop_2_1', popvalue='metropolitan areas')
-    # main_gen_mask(isoname='USA_metro', fieldname='iso_a3', namevalue='USA',
-    #               fieldpop='ghspop_2_1', popvalue='metropolitan areas')
-    # main_gen_mask(isoname='Europe_metro', fieldname='continent', namevalue='Europe',
-    #               fieldpop='ghspop_2_1', popvalue='metropolitan areas')
 
     # 2023.12.19: generate globe height for each region to adjust the value.
-    isonamelist = ['usa', 'europe_metro', 'usa_metro']
-    for isoname in isonamelist:
-        main_clip_wsf(wsfpath=r'D:\data\Landcover\reference\GHS100\GHS_BUILT_H_ANBH_E2018_GLOBE_R2023A_54009_100_V1_0.tif',
-                      resdir = 'ghs',
-                      resuffix='ghs',
-                      isoname =isoname,
-                      nres=None)
+    # isonamelist = ['usa', 'europe_metro', 'usa_metro']
+    # for isoname in isonamelist:
+    #     main_clip_wsf(wsfpath=r'D:\data\Landcover\reference\GHS100\GHS_BUILT_H_ANBH_E2018_GLOBE_R2023A_54009_100_V1_0.tif',
+    #                   resdir = 'ghs',
+    #                   resuffix='ghs',
+    #                   isoname =isoname,
+    #                   nres=None)
