@@ -9,7 +9,7 @@ import torch.nn as nn
 import segmentation_models_pytorch as smp
 from SR.edsr import EDSR, EDSR_fea, EDSR_feaHR
 from segmentation_models_pytorch.encoders import get_encoder
-from segmentation_models_pytorch.decoders.unet import UnetDecoder, UnetDecoder_noise
+from segmentation_models_pytorch.decoders.unet import UnetDecoder# , UnetDecoder_noise
 from SR.HRfuse import HRfuse, HRfuse_x2, HRfeature, HRfuse_residual, Refine_residual, GeoNet, HRupsample
 from torch.distributions.uniform import Uniform
 
@@ -410,6 +410,7 @@ class SRRegress_Cls_nosuper(torch.nn.Module):
 
 
 # unsupervised version
+'''
 class SRRegress_Cls_feature_unsup(torch.nn.Module):
     def __init__(self, encoder_name="resnet50", encoder_weights="imagenet", encoder_depth=5,
                  in_channels=7, classes=1, super_in=4, super_mid=64, upscale=4,
@@ -506,7 +507,7 @@ class SRRegress_Cls_feature_unsup(torch.nn.Module):
         height_noise = [i.squeeze() for i in height_noise]
 
         return height, height_noise
-
+'''
 
 # 2023.11.15: add geo prior
 class SRRegress_Cls_feature_geo(torch.nn.Module):
