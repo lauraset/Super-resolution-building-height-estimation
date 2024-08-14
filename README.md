@@ -2,7 +2,8 @@
 Author: Yinxia Cao, Qihao Weng* | [Paper link](https://www.sciencedirect.com/science/article/pii/S0034425724002591) | Date: August 2024 | Journal: Remote Sensing of Environment 
 
 ## Dataset
-- Download link in [google drive](https://drive.google.com/drive/folders/1ngeSyPWOUkj0DTS4M1zuSsbIdYeAHHhS?usp=drive_link) or [Onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf). The total size is 2.72G    
+### 1. pre-processed data
+- Download link in [google drive, only with samples](https://drive.google.com/drive/folders/1ngeSyPWOUkj0DTS4M1zuSsbIdYeAHHhS?usp=drive_link) or [Onedrive, full data](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf). The total size is 2.72G    
 - Unzip them to a path (e.g., `data`)
 - Split dataset into train/val/test set, see the directory `data`
  The specific spliting file is put in `BH_dataset.py`
@@ -11,6 +12,12 @@ The specifi file is `stats_dataset_globe.py`
 - Distribution of the dataset (45,000 samples)
 ![figure](assets/Figure%201.JPG) 
 ![figure](assets/Figure%202.JPG) 
+
+### 2. the original data
+- original building height data: [onedrive](https://1drv.ms/f/s!AsLBo0q3zUjCgYRfYHgM8oSZqFsiFg?e=YfJTuf)
+- original sentinel-1/2 data for sampling construction:   
+They were downloaded from GEE for each image patch (640 x 640 m), and therefore there is no orginal data.Just see `1. the pre-processed data`.
+
 
 ## Method
 ![figure](assets/Figure%203.jpg)
